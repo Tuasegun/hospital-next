@@ -8,11 +8,11 @@ export const theme = extendTheme({
     global: {
       'body': {
         bg: 'brand.white',
-        color: 'brand.purple.500',
-        fontSize: '1rem',
+        color: 'brand.gray',
+        fontSize: 'md',
       },
       'a': {
-        color: 'brand.dark',
+        color: 'brand.darkBlue',
       },
       'button': {
         _focus: {
@@ -20,7 +20,7 @@ export const theme = extendTheme({
         },
       },
       'h1, h2, h3, h4, h5, h6': {
-        color: 'brand.dark',
+        color: 'brand.darkBlue',
         fontWeight: '700',
       },
       '.nested-scope-list': {
