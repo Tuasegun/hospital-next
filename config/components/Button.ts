@@ -27,7 +27,7 @@ export const Button: ComponentStyleConfig = {
     },
   },
   variants: {
-    link: {
+    'link': {
       padding: 0,
       color: 'brand.purple.200',
       fontWeight: '700',
@@ -40,7 +40,7 @@ export const Button: ComponentStyleConfig = {
         color: 'brand.yellow.700',
       },
     },
-    solid: {
+    'solid': {
       bg: 'brand.purple.200',
       fontWeight: '700',
       fontSize: ['0.853rem', '0.853rem', 'xl'],
@@ -86,7 +86,7 @@ export const Button: ComponentStyleConfig = {
         bg: 'brand.yellow.700',
       },
     },
-    outline: {
+    'outline': {
       bg: 'transparent',
       color: 'brand.purple.500',
       borderColor: 'brand.purple.500',
@@ -122,7 +122,7 @@ export const Button: ComponentStyleConfig = {
         borderColor: '#F3F3F3',
       },
     },
-    subtle: (props) => {
+    'subtle': (props) => {
       return {
         backgroundColor: `${props.colorScheme}.50`,
         color: `${props.colorScheme}.700`,

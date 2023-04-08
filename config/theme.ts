@@ -6,15 +6,15 @@ import { Button } from './components/Button'
 export const theme = extendTheme({
   styles: {
     global: {
-      body: {
+      'body': {
         bg: 'brand.white',
         color: 'brand.purple.500',
         fontSize: '1rem',
       },
-      a: {
+      'a': {
         color: 'brand.dark',
       },
-      button: {
+      'button': {
         _focus: {
           outline: 'none',
         },
@@ -24,7 +24,7 @@ export const theme = extendTheme({
         fontWeight: '700',
       },
       '.nested-scope-list': {
-        ol: {
+        'ol': {
           counterReset: 'item',
         },
         'li > ul': {
@@ -60,11 +60,11 @@ export const theme = extendTheme({
     // },
   },
   fontSizes: {
-    xs: '0.75rem',
-    sm: '0.8rem',
-    md: '0.875rem',
-    lg: '1rem',
-    xl: '1.125rem',
+    'xs': '0.75rem',
+    'sm': '0.8rem',
+    'md': '0.875rem',
+    'lg': '1rem',
+    'xl': '1.125rem',
     '2xl': '1.25rem',
     '3xl': '1.5rem',
     '4xl': '1.875rem',
