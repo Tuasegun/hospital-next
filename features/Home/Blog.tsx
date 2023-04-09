@@ -1,5 +1,4 @@
 import React from 'react'
-import { BlogCard } from './BlogCard'
 import { Box, Flex, Image, Stack, Text } from '@chakra-ui/react'
 
 export const Blog = () => {
@@ -41,5 +40,35 @@ export const Blog = () => {
         />
       </Flex>
     </Box>
+  )
+}
+
+interface BlogCardItems {
+  imageLink: string
+  title: string
+}
+
+const BlogCard = ({ imageLink, title }: BlogCardItems) => {
+  return (
+    <Stack>
+      <Box>
+        <Text as="a" href="#">
+          <Image src={imageLink} />
+        </Text>
+      </Box>
+      <Text
+        href="#"
+        as="a"
+        color="brand.blue.100"
+        textTransform="uppercase"
+        fontSize="xs"
+        w="fit-content"
+      >
+        Evercare Blog
+      </Text>
+      <Text href="#" as="a" fontSize="lg" color="#2D3C53">
+        {title}
+      </Text>
+    </Stack>
   )
 }
