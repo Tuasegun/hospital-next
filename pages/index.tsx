@@ -1,4 +1,4 @@
-import { Hero, About, Blog } from '../features/Home'
+import { Hero, About, Blog, Footer } from '../features/Home'
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <Hero />
       <About />
       <Blog />
+      <Footer />
     </>
   )
 }
