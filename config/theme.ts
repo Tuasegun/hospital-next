@@ -42,8 +42,8 @@ export const theme = extendTheme({
     },
   },
   fonts: {
-    body: 'Brown Regular, sans-serif',
-    heading: 'Brown Regular, sans-serif',
+    body: 'brownregular, sans-serif',
+    bold: 'brownbold, sans-serif',
     inter: 'Inter, sans-serif',
   },
   colors: colors,
@@ -63,6 +63,7 @@ export const theme = extendTheme({
     'xs': '0.75rem',
     'sm': '0.8rem',
     'md': '0.875rem',
+    'mmd': '0.9375rem', //15px
     'lg': '1rem',
     'xl': '1.125rem',
     '2xl': '1.25rem',

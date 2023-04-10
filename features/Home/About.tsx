@@ -14,7 +14,7 @@ export const About = () => {
           justify="center"
           gap="0.8em"
         >
-          <Text as={'h3'} fontSize="3xl">
+          <Text as={'h3'} fontFamily="bold" fontSize="3xl">
             Evercare Hospital Lekki
           </Text>
           <Text>

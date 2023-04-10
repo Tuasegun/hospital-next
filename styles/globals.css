@@ -1,6 +1,13 @@
-@font-face{
-  font-family: 'Brown Regular';
-  src: url('/assets/fonts/Brown-Regular.tff') format('tff');
+@font-face {
+  font-family: 'brownregular';
+  src: url('/assets/fonts/brown-regular-webfont.woff2') format('woff2');
+  font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'brownbold';
+  src: url('/assets/fonts/brown-bold-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -18,7 +18,7 @@ export const Footer = () => {
             Lekki Peninsula Scheme 1, Lekki, Lagos State
             <br />
             <br />
-            <Text as="a" href="tel:08139850710">
+            <Text as="a" href="tel:08139850710" fontFamily="bold">
               0813 985 0710
             </Text>
           </Text>
@@ -35,7 +35,8 @@ export const Footer = () => {
                 display="block"
                 as="span"
                 color="brand.darkBlue"
-                fontSize="0.9375rem"
+                fontSize="mmd"
+                fontFamily="bold"
                 mb="8px"
               >
                 {item.heading}

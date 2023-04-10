@@ -15,7 +15,7 @@ export const Blog = () => {
           gap="1rem"
         >
           <Box w="70px" h="4px" mx="auto" mt="7px" bg="brand.blue.100" />
-          <Text>
+          <Text fontSize="mmd">
             We provide general information and discussion to promote
             understanding about various health-related topics.
           </Text>
@@ -66,7 +66,7 @@ const BlogCard = ({ imageLink, title }: BlogCardItems) => {
       >
         Evercare Blog
       </Text>
-      <Text href="#" as="a" fontSize="lg" color="#2D3C53">
+      <Text href="#" as="a" fontSize="lg" color="#2D3C53" fontFamily="bold">
         {title}
       </Text>
     </Stack>
