@@ -1,17 +1,22 @@
-import { MainContainer } from '@/layouts'
-import { Box, Image, List, ListItem, Stack, Text, Flex } from '@chakra-ui/react'
 import { Fragment } from 'react'
+import { Box, Image, List, ListItem, Stack, Text, Flex } from '@chakra-ui/react'
+
+import { MainContainer } from '@/layouts'
 
 const YEAR = new Date().getFullYear()
 
 export const Footer = () => {
   return (
-    <Fragment>
-      <Box as="hr" />
-      <MainContainer as="footer">
+    <Box
+      as="footer"
+      pt="5rem"
+      pb="2.5rem"
+      borderTop={1}
+      borderStyle={'solid'}
+      borderColor="gray.100"
+    >
+      <MainContainer>
         <Flex
-          pt="5rem"
-          pb="2.5rem"
           rowGap="3rem"
           flexDirection={['column', 'column', 'row']}
           justifyContent="space-between"
@@ -91,7 +96,7 @@ export const Footer = () => {
           </Flex>
         </Stack>
       </MainContainer>
-    </Fragment>
+    </Box>
   )
 }
 
