@@ -1,9 +1,11 @@
 import React from 'react'
 import { Box, Flex, Text } from '@chakra-ui/react'
 
+import { MainContainer } from '@/layouts'
+
 export const About = () => {
   return (
-    <Box as="section" p={['60px 20px', '60px 5px']} bg="brand.purple.200">
+    <MainContainer bg="brand.purple.200" as="section" py="3.75rem">
       <Flex
         flexDir={['column-reverse', 'column-reverse', 'row']}
         justify="space-between"
@@ -36,6 +38,6 @@ export const About = () => {
           ></iframe>
         </Box>
       </Flex>
-    </Box>
+    </MainContainer>
   )
 }

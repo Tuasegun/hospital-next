@@ -1,9 +1,11 @@
 import React from 'react'
 import { Box, Flex, Image, Stack, Text } from '@chakra-ui/react'
 
+import { MainContainer } from '@/layouts'
+
 export const Blog = () => {
   return (
-    <Box as="section" py="5.625rem">
+    <MainContainer as="section" py="5.625rem">
       <Box mb="2.5rem">
         <Text as={'h3'} fontSize="3xl">
           Newsletters, Blogposts, Health Tips
@@ -39,7 +41,7 @@ export const Blog = () => {
           title="BRAIN TUMORS: Types, Causes, Symptoms & Treatments"
         />
       </Flex>
-    </Box>
+    </MainContainer>
   )
 }
 
