@@ -1,4 +1,5 @@
 import { MainContainer } from '@/layouts'
+import { SocialIcons } from '@/components'
 
 import {
   Box,
@@ -30,7 +31,13 @@ export const Navbar = () => {
   return (
     <Box as="nav">
       <MainContainer>
-        <Flex py={4} justifyContent={'space-between'}>
+        <Flex
+          flexDirection={['column-reverse', 'column-reverse', 'row']}
+          py={4}
+          justifyContent={'space-between'}
+          alignItems={['center']}
+          rowGap={4}
+        >
           <Flex w={'50%'}>
             <Image
               w={'213px'}
@@ -39,10 +46,10 @@ export const Navbar = () => {
           </Flex>
           <Stack
             flex={{ base: 1, md: 0 }}
-            justify={'flex-end'}
+            justify={['space-between', 'space-between', 'flex-end']}
             direction={'row'}
             spacing={2}
-            w={'50%'}
+            w={['100%', '100%', '50%']}
           >
             <Button as={'a'} variant={'outline'} href={'#'}>
               Covid-19 Testing
@@ -61,6 +68,7 @@ export const Navbar = () => {
             color={useColorModeValue('gray.600', 'white')}
             minH={'60px'}
             align={'center'}
+            justifyContent={'space-between'}
           >
             <Flex
               flex={{ base: 1, md: 'auto' }}
@@ -83,6 +91,7 @@ export const Navbar = () => {
             <Flex display={{ base: 'none', md: 'flex' }}>
               <DesktopNav />
             </Flex>
+            <SocialIcons />
           </Flex>
 
           <Collapse in={isOpen} animateOpacity>
@@ -122,7 +131,11 @@ const DesktopNav = () => {
                 <Box
                   aria-hidden
                   h="4px"
-                  bg="transparent"
+                  bg={
+                    navItem.label === 'Home'
+                      ? 'brand.purple.300'
+                      : 'transparent'
+                  }
                   pos={'absolute'}
                   w={'100%'}
                   bottom="0"
@@ -328,12 +341,6 @@ const NAV_ITEMS: Array<NavItem> = [
         href: '#',
       },
     ],
-  },
-  {
-    label: 'Ecare Initiatives',
-  },
-  {
-    label: 'Media Center',
   },
   {
     label: 'Careers',
