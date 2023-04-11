@@ -41,10 +41,10 @@ export const Navbar = () => {
             flex={{ base: 1, md: 0 }}
             justify={'flex-end'}
             direction={'row'}
-            spacing={6}
+            spacing={2}
             w={'50%'}
           >
-            <Button as={'a'} variant={'link'} href={'#'}>
+            <Button as={'a'} variant={'outline'} href={'#'}>
               Covid-19 Testing
             </Button>
             <Button as={'a'} variant={'solid'}>
@@ -100,7 +100,7 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue('white', 'gray.800')
 
   return (
-    <Stack direction={'row'} spacing={8}>
+    <Stack direction={'row'} spacing={[0, 4, 4, 8]}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -291,17 +291,57 @@ const NAV_ITEMS: Array<NavItem> = [
     label: 'Services',
     children: [
       {
-        label: 'Explore Design Work',
+        label: 'Doctors',
         href: '#',
       },
       {
-        label: 'New & Noteworthy',
+        label: 'Nursing',
+        href: '#',
+      },
+      {
+        label: 'Speciality',
+        href: '#',
+      },
+      {
+        label: 'Quality & Safety',
+        href: '#',
+      },
+      {
+        label: 'Health and wellness packages',
         href: '#',
       },
     ],
   },
   {
     label: 'Customer Support',
-    href: '#',
+    children: [
+      {
+        label: 'Feedback Form',
+        href: '#',
+      },
+      {
+        label: 'Patient Experience',
+        href: '#',
+      },
+      {
+        label: 'Whistle Blowing',
+        href: '#',
+      },
+    ],
+  },
+  {
+    label: 'Ecare Initiatives',
+  },
+  {
+    label: 'Media Center',
+  },
+  {
+    label: 'Careers',
+  },
+  {
+    label: 'Contact Us',
+  },
+  {
+    label: 'Ecare Health Packages',
   },
 ]
