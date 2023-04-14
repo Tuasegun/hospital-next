@@ -5,39 +5,41 @@ import { MainContainer } from '@/layouts'
 
 export const About = () => {
   return (
-    <MainContainer bg="brand.purple.200" as="section" py="3.75rem">
-      <Flex
-        flexDir={['column-reverse', 'column-reverse', 'row']}
-        justify="space-between"
-      >
+    <Box bg="brand.purple.200" as="section" py="3.75rem">
+      <MainContainer>
         <Flex
-          w={['100%', '100%', '45%']}
-          direction="column"
-          justify="center"
-          gap="0.8em"
+          flexDir={['column-reverse', 'column-reverse', 'row']}
+          justify="space-between"
         >
-          <Text as={'h3'} fontFamily="bold" fontSize="3xl">
-            Evercare Hospital Lekki
-          </Text>
-          <Text>
-            Evercare hospital Lekki is a 165-bed purpose-built multispecialty,
-            tertiary care private hospital in Nigeria. Evercare Hospital Lekki
-            offers care across a range of specialty medical and surgical
-            services. This is a first of its kind facility in Nigeria and
-            delivers high quality, and accessible healthcare to communities in
-            Lagos and Nigeria at large.
-          </Text>
+          <Flex
+            w={['100%', '100%', '45%']}
+            direction="column"
+            justify="center"
+            gap="0.8em"
+          >
+            <Text as={'h3'} fontFamily="bold" fontSize="3xl">
+              Evercare Hospital Lekki
+            </Text>
+            <Text>
+              Evercare hospital Lekki is a 165-bed purpose-built multispecialty,
+              tertiary care private hospital in Nigeria. Evercare Hospital Lekki
+              offers care across a range of specialty medical and surgical
+              services. This is a first of its kind facility in Nigeria and
+              delivers high quality, and accessible healthcare to communities in
+              Lagos and Nigeria at large.
+            </Text>
+          </Flex>
+          <Box w={['100%', '100%', '45%']} mb={['20px', '0']}>
+            <iframe
+              width="100%"
+              style={{ aspectRatio: '16/9' }}
+              src="https://www.youtube.com/embed/D4NOi8QgHHs"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </Box>
         </Flex>
-        <Box w={['100%', '100%', '45%']} mb={['20px', '0']}>
-          <iframe
-            width="100%"
-            style={{ aspectRatio: '16/9' }}
-            src="https://www.youtube.com/embed/D4NOi8QgHHs"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </Box>
-      </Flex>
-    </MainContainer>
+      </MainContainer>
+    </Box>
   )
 }
