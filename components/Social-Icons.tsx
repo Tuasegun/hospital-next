@@ -21,7 +21,7 @@ interface SocialIconProps {
 
 export const SocialIcons = ({ baseColour, hoverColor }: SocialIconProps) => {
   return (
-    <Stack direction={'row'} spacing={4}>
+    <Stack direction={'row'} spacing={2}>
       <SocialButton
         colors={{
           baseColour,
@@ -32,16 +32,44 @@ export const SocialIcons = ({ baseColour, hoverColor }: SocialIconProps) => {
       >
         <FaTwitter />
       </SocialButton>
-      <SocialButton label={'Facebook'} href={'#'}>
+      <SocialButton
+        colors={{
+          baseColour,
+          hoverColor,
+        }}
+        label={'Facebook'}
+        href={'#'}
+      >
         <FaFacebookF />
       </SocialButton>
-      <SocialButton label={'Instagram'} href={'#'}>
+      <SocialButton
+        colors={{
+          baseColour,
+          hoverColor,
+        }}
+        label={'Instagram'}
+        href={'#'}
+      >
         <FaInstagram />
       </SocialButton>
-      <SocialButton label={'LinkedIn'} href={'#'}>
+      <SocialButton
+        colors={{
+          baseColour,
+          hoverColor,
+        }}
+        label={'LinkedIn'}
+        href={'#'}
+      >
         <FaLinkedinIn />
       </SocialButton>
-      <SocialButton label={'YouTube'} href={'#'}>
+      <SocialButton
+        colors={{
+          baseColour,
+          hoverColor,
+        }}
+        label={'YouTube'}
+        href={'#'}
+      >
         <FaYoutube />
       </SocialButton>
     </Stack>
@@ -61,8 +89,7 @@ const SocialButton = ({
 }) => {
   return (
     <chakra.button
-      bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-      rounded={'full'}
+      rounded={'4'}
       w={6}
       h={6}
       cursor={'pointer'}
@@ -72,8 +99,11 @@ const SocialButton = ({
       alignItems={'center'}
       justifyContent={'center'}
       transition={'background 0.3s ease'}
+      borderWidth={1}
+      borderColor={'gray.100'}
+      color={colors?.baseColour || 'brand.gray'}
       _hover={{
-        bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
+        color: `${colors?.hoverColor || 'brand.purple.100'}`,
       }}
     >
       <VisuallyHidden>{label}</VisuallyHidden>

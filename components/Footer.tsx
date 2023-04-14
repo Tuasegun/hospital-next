@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import { Box, Image, List, ListItem, Stack, Text, Flex } from '@chakra-ui/react'
 
 import { MainContainer } from '@/layouts'
+import { SocialIcons } from './Social-Icons'
 
 const YEAR = new Date().getFullYear()
 
@@ -70,31 +71,55 @@ export const Footer = () => {
             ))}
           </Stack>
         </Flex>
-        <Stack borderTop="1px solid #F1F2F4" pt="2.5rem">
-          <Text textAlign="center">
-            Copyright © {YEAR} Evercare Hospital Lekki. All Rights Reserved.
-          </Text>
-          <Flex gap="1rem" justifyContent="center">
-            <Text
-              as="a"
-              href="#"
-              color="brand.gray"
-              textDecor="underline"
-              _hover={{ color: 'brand.darkBlue' }}
-            >
-              Terms of Use
+        <Flex flexDirection={['column', 'column', 'row-reverse']} rowGap={8}>
+          <Stack
+            w={['100%', '100%', '60%']}
+            borderTop="1px solid #F1F2F4"
+            pt="2.5rem"
+          >
+            <Text textAlign="center">
+              Copyright © {YEAR} Evercare Hospital Lekki. All Rights Reserved.
             </Text>
+            <Flex gap="1rem" justifyContent="center">
+              <Text
+                as="a"
+                href="#"
+                color="brand.gray"
+                textDecor="underline"
+                _hover={{ color: 'brand.darkBlue' }}
+              >
+                Terms of Use
+              </Text>
+              <Text
+                as="a"
+                href="#"
+                color="brand.gray"
+                textDecor="underline"
+                _hover={{ color: 'brand.darkBlue' }}
+              >
+                Privacy Policy
+              </Text>
+            </Flex>
+          </Stack>
+          <Flex
+            w={['max-content', 'max-content', '40%']}
+            flexDirection={'column'}
+            alignSelf={'center'}
+          >
             <Text
-              as="a"
-              href="#"
-              color="brand.gray"
-              textDecor="underline"
-              _hover={{ color: 'brand.darkBlue' }}
+              color={'brand.blue.50'}
+              fontSize={'12px'}
+              mb={'10px'}
+              textAlign={['center', 'center', 'left']}
             >
-              Privacy Policy
+              Follow us:
             </Text>
+            <SocialIcons
+              baseColour={'brand.blue.100'}
+              hoverColor={'brand.blue.200'}
+            />
           </Flex>
-        </Stack>
+        </Flex>
       </MainContainer>
     </Box>
   )

@@ -7,17 +7,19 @@ export const Blog = () => {
   return (
     <Box as="section" py="5.625rem">
       <MainContainer>
-        <Box mb="2.5rem">
+        <Box mb="2.5rem" textAlign={['center', 'center', 'left']}>
           <Text as={'h3'} fontSize="3xl">
             Newsletters, Blogposts, Health Tips
           </Text>
           <Flex
-            w={['100%', '80%', '60%']}
+            maxW={['100%', '100%', '35rem']}
             flexDirection={['column', 'column', 'row']}
             my="0.5rem"
             gap="1rem"
           >
-            <Box w="70px" h="4px" mx="auto" mt="7px" bg="brand.blue.100" />
+            <Box>
+              <Box w="70px" h="4px" mx="auto" mt="7px" bg="brand.blue.100" />
+            </Box>
             <Text fontSize="mmd">
               We provide general information and discussion to promote
               understanding about various health-related topics.
