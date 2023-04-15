@@ -1,14 +1,12 @@
-import { Footer, Navbar } from '@/components'
-import { Hero, About, Blog } from '../features/Home'
+import { About, Blog } from '../features/Home'
+import { MainLayout } from '@/layouts/MainLayout'
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
+    <MainLayout>
       {/* <Hero /> */}
       <About />
       <Blog />
-      <Footer />
-    </>
+    </MainLayout>
   )
 }
