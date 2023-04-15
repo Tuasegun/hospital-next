@@ -1,6 +1,7 @@
 import { MainContainer } from '@/layouts'
 import { SocialIcons } from '@/components'
 
+import { useRouter } from 'next/router'
 import {
   Box,
   Flex,
@@ -104,6 +105,14 @@ export const Navbar = () => {
 }
 
 const DesktopNav = () => {
+  const router = useRouter()
+
+  const isActive = (path: string) => {
+    return path.split('/').length > 2
+      ? router.pathname.startsWith(`/${path.split('/')[0]}`)
+      : router.pathname === path
+  }
+
   const linkColor = useColorModeValue('brand.gray', 'gray.200')
   const linkHoverColor = useColorModeValue('brand.purple.300', 'white')
   const popoverContentBgColor = useColorModeValue('white', 'gray.800')
@@ -117,7 +126,7 @@ const DesktopNav = () => {
               <Link
                 py={4}
                 pos="relative"
-                href={navItem.href ?? '#'}
+                href={navItem.href}
                 fontSize={'mmd'}
                 fontWeight={500}
                 color={linkColor}
@@ -132,10 +141,13 @@ const DesktopNav = () => {
                   aria-hidden
                   h="4px"
                   bg={
-                    navItem.label === 'Home'
-                      ? 'brand.purple.300'
-                      : 'transparent'
+                    isActive(navItem.href) ? 'brand.purple.300' : 'transparent'
                   }
+                  // bg={
+                  //   navItem.label === 'Home'
+                  //     ? 'brand.purple.300'
+                  //     : 'transparent'
+                  // }
                   pos={'absolute'}
                   w={'100%'}
                   bottom="0"
@@ -275,16 +287,17 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 interface NavItem {
   label: string
   children?: Array<NavItem>
-  href?: string
+  href: string
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Home',
-    href: '#',
+    href: '/',
   },
   {
     label: 'About Us',
+    href: '/about-us',
     children: [
       {
         label: 'Who we are',
@@ -302,6 +315,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Services',
+    href: '#',
     children: [
       {
         label: 'Doctors',
@@ -327,6 +341,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Customer Support',
+    href: '#',
     children: [
       {
         label: 'Feedback Form',
@@ -344,11 +359,14 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Careers',
+    href: '#',
   },
   {
     label: 'Contact Us',
+    href: '#',
   },
   {
     label: 'Ecare Health Packages',
+    href: '#',
   },
 ]
