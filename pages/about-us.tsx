@@ -1,11 +1,16 @@
 import React from 'react'
 import { Hero } from '../features/AboutComponents'
-import { MainLayout } from '@/layouts/MainLayout'
+import { MainContainer, MainLayout } from '@/layouts'
+import { Banner } from '@/components'
+import { Box } from '@chakra-ui/react'
 
 const AboutUs = () => {
   return (
     <MainLayout>
-      <Hero />
+      <MainContainer>
+        <Banner pageTitle="About Us" />
+        about content
+      </MainContainer>
     </MainLayout>
   )
 }
